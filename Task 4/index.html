@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home | Auth System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="checkHomeAuth()">
+
+    <!-- ================= NAVBAR ================= -->
+    <div class="navbar">
+        <h1>AuthSystem</h1>
+        <div id="navLinks">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN SECTION ================= -->
+    <div class="container">
+
+        <div class="dashboard-card">
+
+            <h2 id="homeTitle">Welcome to Auth System</h2>
+
+            <p id="homeDesc">
+                A secure and modern authentication system built using HTML, CSS, and JavaScript.
+            </p>
+
+            <!-- Buttons for logged out users -->
+            <div id="homeButtons" class="home-buttons">
+                <a href="login.html">
+                    <button class="btn">Login</button>
+                </a>
+
+                <a href="register.html">
+                    <button class="btn">Register</button>
+                </a>
+            </div>
+
+            <!-- Buttons for logged in users -->
+            <div id="dashboardButton" style="display:none;" class="home-buttons">
+                <a href="dashboard.html">
+                    <button class="btn">Go to Dashboard</button>
+                </a>
+
+                <button class="btn logout-btn" onclick="logout()">Logout</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+    <div class="footer">
+        © 2026 AuthSystem. All rights reserved.
+    </div>
+
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

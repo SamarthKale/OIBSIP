@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard | Auth System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="checkAuth()">
+
+<div class="navbar">
+    <h1>AuthSystem</h1>
+    <a href="#" onclick="logout()">Logout</a>
+</div>
+
+<div class="container">
+    <div class="dashboard-card">
+        <h2>Dashboard</h2>
+        <p id="welcomeText"></p>
+
+        <p>This is a secured page accessible only after login.</p>
+
+        <button class="btn logout-btn" onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<div class="footer">
+    © 2026 AuthSystem. All rights reserved.
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

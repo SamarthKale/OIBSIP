@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login | Auth System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1>AuthSystem</h1>
+    <a href="register.html">Register</a>
+</div>
+
+<div class="container">
+    <div class="auth-card">
+        <h2>Welcome Back</h2>
+        <p>Login to continue</p>
+
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="loginUser" placeholder="Enter username">
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="loginPass" placeholder="Enter password">
+        </div>
+
+        <button class="btn" onclick="login()">Login</button>
+
+        <div class="auth-link">
+            Don't have an account? <a href="register.html">Register</a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    © 2026 AuthSystem. All rights reserved.
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
