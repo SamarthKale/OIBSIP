@@ -1,0 +1,337 @@
+/* ================= VARIABLES & RESET ================= */
+:root {
+    --max-orange: #ff6600;
+    --rb-blue: #06192e;
+    --rb-yellow: #fbbd08;
+    --text-light: #f0f0f0;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --border-glow: 1px solid rgba(255, 102, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background: #0b0d10;
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), #0b0d10);
+}
+
+/* 🔥 THE BRIGHTER MAX VERSTAPPEN TITLE 🔥 */
+.hero-content h1 {
+    font-size: 6.5rem; /* Increased size slightly */
+    font-weight: 900;
+    letter-spacing: 4px;
+    line-height: 1.1;
+    
+    /* Brighter Gradient */
+    background: linear-gradient(135deg, #ffffff 0%, #ff6600 50%, #ffd700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Base Shadow to make it pop off background */
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.8));
+
+    /* The Animation Trigger */
+    animation: superGlow 2s infinite alternate ease-in-out;
+}
+
+.hero-content p {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--rb-yellow);
+    text-shadow: 0 0 20px rgba(251, 189, 8, 0.6);
+    text-transform: uppercase;
+}
+
+/* ================= STATS BAR ================= */
+
+.stats-bar {
+    background: var(--rb-blue);
+    padding: 3rem 5%;
+    border-top: 2px solid var(--max-orange);
+    border-bottom: 2px solid var(--max-orange);
+    position: relative;
+    z-index: 2;
+}
+
+.achieve-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.stat-box {
+    background: var(--glass-bg);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: var(--border-glow);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 102, 0, 0.1);
+    box-shadow: 0 0 30px rgba(255,102,0,0.5);
+    border-color: var(--max-orange);
+}
+
+.stat-box h3 {
+    font-size: 3.5rem;
+    color: var(--max-orange);
+    margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+    font-size: 1.2rem;
+    color: #ccc;
+    letter-spacing: 1px;
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.about {
+    display: flex;
+    padding: 6rem 10%;
+    gap: 4rem;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #111;
+}
+
+.about-img img {
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(255,102,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--max-orange);
+    text-shadow: 0 0 20px rgba(255,102,0,0.3);
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+/* ================= ADMIRATION / CARS ================= */
+
+.admiration {
+    padding: 5rem 10%;
+    background: #0b0d10;
+    text-align: center;
+}
+
+.admiration h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.admire-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 2.5rem;
+}
+
+.admire-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+    border: 1px solid rgba(255,102,0,0.2);
+}
+
+.admire-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 40px rgba(255,102,0,0.3);
+    border-color: var(--max-orange);
+}
+
+.admire-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.admire-card h3 {
+    color: var(--max-orange);
+    font-size: 1.5rem;
+    margin: 1.5rem 1rem 0.5rem;
+}
+
+.admire-card p {
+    padding: 0 1.5rem 2rem;
+    color: #bbb;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ================= CAREER ================= */
+
+.career {
+    padding: 6rem 10%;
+    background: #111;
+}
+
+.career h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.career-content {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.career-content img {
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(255,102,0,0.2);
+}
+
+.career-text {
+    flex: 1;
+}
+
+.career-text p {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* ================= QUOTE ================= */
+
+.quote {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(to right, #8e0000, #ff1e1e);
+    position: relative;
+    overflow: hidden;
+}
+
+.quote h2 {
+    font-size: 3rem;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    z-index: 2;
+    position: relative;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 2.5rem;
+    text-align: center;
+    background: #000;
+    color: #666;
+    border-top: 1px solid #222;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes superGlow {
+    0% {
+        text-shadow: 
+            0 0 10px rgba(255, 102, 0, 0.5),
+            0 0 20px rgba(255, 215, 0, 0.3);
+        filter: brightness(100%);
+    }
+    100% {
+        text-shadow: 
+            0 0 20px rgba(255, 102, 0, 1),
+            0 0 40px rgba(255, 102, 0, 0.8),
+            0 0 60px rgba(255, 215, 0, 0.6),
+            0 0 80px rgba(255, 255, 255, 0.4);
+        filter: brightness(130%); /* Makes the colors burn brighter */
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 900px) {
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+    
+    .about, .career-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img img, .career-content img {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media(max-width: 480px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .stats-bar, .about, .career, .quote {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
