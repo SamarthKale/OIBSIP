@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskFlow — Smart To-Do App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <header>
+        <h1>TaskFlow</h1>
+        <p>Organize your day, boost your productivity</p>
+    </header>
+
+    <section class="task-input">
+        <input type="text" id="taskInput" placeholder="What do you need to do today?">
+        <button onclick="addTask()">Add Task</button>
+    </section>
+
+    <main class="board">
+
+        <section class="column">
+            <h2>⏳ Pending Tasks</h2>
+            <ul id="pendingList"></ul>
+        </section>
+
+        <section class="column completed">
+            <h2>✅ Completed Tasks</h2>
+            <ul id="completedList"></ul>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.app-container {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    color: #fff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+header p {
+    opacity: 0.85;
+    margin-top: 5px;
+}
+
+.task-input {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.task-input button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    background: #00e5ff;
+    color: #222;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.task-input button:hover {
+    background: #1de9b6;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.column {
+    background: rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 20px;
+    min-height: 350px;
+}
+
+.column h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+}
+
+.task-card {
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.task-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-title {
+    font-weight: 500;
+}
+
+.task-time {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.task-actions button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-left: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.complete-btn {
+    background: #00e676;
+}
+
+.edit-btn {
+    background: #ffeb3b;
+}
+
+.delete-btn {
+    background: #ff5252;
+    color: white;
+}
+
+.task-actions button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .board {
+        grid-template-columns: 1fr;
+    }
+}
